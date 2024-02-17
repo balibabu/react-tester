@@ -9,25 +9,25 @@ export default function Storage() {
         const form = new FormData()
         form.append('file', file);
         form.append('id', id)
-        const res = await axios.post('https://storeage.pythonanywhere.com/storage/upload/', form);
+        const res = await axios.post('https://storeage.pythonanywhere.com/upload/', form);
         console.log(res);
     }
     async function get() {
-        const res = await axios.get('https://storeage.pythonanywhere.com/storage/request/an/id/');
+        const res = await axios.get('https://storeage.pythonanywhere.com/request/an/id/');
         setId(res.data.id);
     }
     async function getFilesInfo() {
-        const res = await axios.get(`https://storeage.pythonanywhere.com/storage/files/info/${id}/`);
+        const res = await axios.get(`https://storeage.pythonanywhere.com/files/info/${id}/`);
         console.log(res.data);
     }
 
     async function download() {
-        const res = await axios.get(`https://storeage.pythonanywhere.com/storage/download/${id}/${0}/`);
+        const res = await axios.get(`https://storeage.pythonanywhere.com/download/${id}/${0}/`);
         console.log(res.data);
     }
 
     async function deleteFile() {
-        const res = await axios.get(`https://storeage.pythonanywhere.com/storage/delete/${id}/${0}/`);
+        const res = await axios.get(`https://storeage.pythonanywhere.com/delete/${id}/${0}/`);
         console.log(res.data);
     }
     
