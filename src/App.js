@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Swipe from './Test/Swipe'
-import Framer1 from './FramerMotion/Framer1'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home';
 import Storage from './Test/Storage';
+import Framer from './FramerMotion/Framer';
 
 export default function App() {
 	const [routes,] = useState('framer,swipe,storage'.split(','));
-	const [elements,] = useState([<Framer1 />, <Swipe />, <Storage />]);
+	const [elements,] = useState([<Framer />, <Swipe />, <Storage />]);
 	return (
 		<>
 			<HashRouter>
