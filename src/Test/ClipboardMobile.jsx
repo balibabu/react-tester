@@ -12,10 +12,10 @@ export default function ClipboardMobile() {
                 })
                 .catch(error => {
                     console.error('Failed to read clipboard data: ', error);
-                    setErrors(error);
+                    setErrors(error.message);
                 });
         } catch (error) {
-            setClip(error);
+            setClip(error.message);
         }
     }
 
