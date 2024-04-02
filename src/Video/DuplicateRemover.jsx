@@ -4,10 +4,11 @@ import Compresssor from './Compressor';
 export default function DuplicateRemover() {
     const [file, setFile] = useState();
     const [busy, setBusy] = useState(false);
+    const [progress, setProgress] = useState(0);
 
     function onClickHandler() {
         if (file) {
-            Compresssor(file, setBusy);
+            Compresssor(file, setBusy, setProgress);
         }
         setFile(null);
     }
@@ -15,7 +16,7 @@ export default function DuplicateRemover() {
     return (
         <div>
             {busy ?
-                <div>Please wait, your video is being processed</div>
+                <div>Please wait, your video is being processed, completed-{progress}%</div>
                 :
                 <div>
                     <div>DuplicateFrameRemover</div>

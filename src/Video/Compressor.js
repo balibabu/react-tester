@@ -1,13 +1,8 @@
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { saveAs } from 'file-saver';
 
-export default async function Compresssor(video, setBusy) {
+export default async function Compresssor(video, setBusy, setProgress) {
     setBusy(true);
-    const ffmpeg = new FFmpeg();
-    console.log(video);
-    await ffmpeg.load();
-    // await ffmpeg.writeFile('input.webm', chunk);
-
     const reader = new FileReader();
     reader.readAsArrayBuffer(video);
     await new Promise((resolve) => {
@@ -15,6 +10,10 @@ export default async function Compresssor(video, setBusy) {
             resolve();
         };
     });
+
+    const ffmpeg = new FFmpeg();
+    ffmpeg.on('progress', ({ progress }) => { setProgress((progress * 100).toFixed(1)) });
+    await ffmpeg.load();
     const uint8ArrayChunk = new Uint8Array(reader.result);
     await ffmpeg.writeFile('input.mp4', uint8ArrayChunk);
 
