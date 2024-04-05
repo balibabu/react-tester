@@ -7,10 +7,14 @@ import Framer from './FramerMotion/Framer';
 import Carosel from './Test/Carosel';
 import ClipboardMobile from './Test/ClipboardMobile';
 import DuplicateRemover from './Video/DuplicateRemover';
+import VideoProcessor from './FFmpeg/VideoProcessor';
 
 export default function App() {
-	const [routes,] = useState('framer,swipe,storage,carosel,clip,duplicateFrameRemover'.split(','));
-	const [elements,] = useState([<Framer />, <Swipe />, <Storage />, <Carosel />, <ClipboardMobile />, <DuplicateRemover />]);
+	const [routes,] = useState('framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor'.split(','));
+	const [elements,] = useState([
+		<Framer />, <Swipe />, <Storage />, <Carosel />,
+		<ClipboardMobile />, <DuplicateRemover />, <VideoProcessor />
+	]);
 	return (
 		<>
 			<HashRouter>
