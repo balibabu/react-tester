@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/react-tester/static/js/main.289b8dda.js",
+    "main.js": "/react-tester/static/js/main.0c7057f3.js",
     "static/js/902.20c39cde.chunk.js": "/react-tester/static/js/902.20c39cde.chunk.js",
     "index.html": "/react-tester/index.html",
-    "main.289b8dda.js.map": "/react-tester/static/js/main.289b8dda.js.map",
+    "main.0c7057f3.js.map": "/react-tester/static/js/main.0c7057f3.js.map",
     "902.20c39cde.chunk.js.map": "/react-tester/static/js/902.20c39cde.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.289b8dda.js"
+    "static/js/main.0c7057f3.js"
   ]
 }
