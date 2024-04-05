@@ -12,7 +12,7 @@ export default async function Operation(video, setProgress, command, filename) {
     });
 
     const ffmpeg = new FFmpeg();
-    ffmpeg.on('progress', ({ progress }) => { setProgress((progress * 100 * 2).toFixed(1)) });
+    ffmpeg.on('progress', ({ progress }) => { setProgress((progress * 100).toFixed(1)) });
     await ffmpeg.load();
     const uint8ArrayChunk = new Uint8Array(reader.result);
     await ffmpeg.writeFile('input.mp4', uint8ArrayChunk);

@@ -8,6 +8,7 @@ export default function VideoProcessor() {
     const [output, setOutput] = useState('output.mp4');
 
     async function onSubmit() {
+        setProgress(0.1);
         const cmd = '-i input.mp4 ' + command + ' ' + output;
         Operation(file, setProgress, cmd, output);
         setFile();
