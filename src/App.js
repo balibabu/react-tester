@@ -8,12 +8,23 @@ import Carosel from './Test/Carosel';
 import ClipboardMobile from './Test/ClipboardMobile';
 import DuplicateRemover from './Video/DuplicateRemover';
 import VideoProcessor from './FFmpeg/VideoProcessor';
+import Tester from './cryptography/Tester';
+import Intervaling from './Test/Intervaling';
+import ProgressiveWebApp from './Test/ProgressiveWebApp';
+import ApiTester from './Api/ApiTester';
+import ToastProgress from './Test/ToastProgress';
+import PseudoCodeEditor from './Editor/PseudoCodeEditor';
+import MyDoc from './Editor/MyDoc';
+import ReactQuillTest from './Editor/ReactQuillTest';
 
 export default function App() {
-	const [routes,] = useState('framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor'.split(','));
+	const [routes,] = useState('ReactQuillTest,MyDoc,PseudoCodeEditor,ToastProgress,ApiTester,framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor,Crypto,Interval,PWA-SW'.split(','));
 	const [elements,] = useState([
+		<ReactQuillTest />, <MyDoc />,
+		<PseudoCodeEditor />, <ToastProgress />, <ApiTester />,
 		<Framer />, <Swipe />, <Storage />, <Carosel />,
-		<ClipboardMobile />, <DuplicateRemover />, <VideoProcessor />
+		<ClipboardMobile />, <DuplicateRemover />, <VideoProcessor />,
+		<Tester />, <Intervaling />, <ProgressiveWebApp />,
 	]);
 	return (
 		<>
