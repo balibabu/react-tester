@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import CryptoJS from 'crypto-js';
 import { saveAs } from 'file-saver';
 
