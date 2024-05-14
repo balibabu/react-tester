@@ -17,11 +17,12 @@ import PseudoCodeEditor from './Editor/PseudoCodeEditor';
 import MyDoc from './Editor/MyDoc';
 import ReactQuillTest from './Editor/ReactQuillTest';
 import PrivatePage from './private/PrivatePage';
+import Rubiz from './RubizCube/Rubiz';
 
 export default function App() {
-	const [routes,] = useState('ReactQuillTest,MyDoc,PseudoCodeEditor,ToastProgress,ApiTester,framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor,Crypto,Interval,PWA-SW,PrivatePage'.split(','));
+	const [routes,] = useState('Rubiz,ReactQuillTest,MyDoc,PseudoCodeEditor,ToastProgress,ApiTester,framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor,Crypto,Interval,PWA-SW,PrivatePage'.split(','));
 	const [elements,] = useState([
-		<ReactQuillTest />, <MyDoc />,
+		<Rubiz/>,<ReactQuillTest />, <MyDoc />,
 		<PseudoCodeEditor />, <ToastProgress />, <ApiTester />,
 		<Framer />, <Swipe />, <Storage />, <Carosel />,
 		<ClipboardMobile />, <DuplicateRemover />, <VideoProcessor />,
