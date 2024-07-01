@@ -18,11 +18,17 @@ import MyDoc from './Editor/MyDoc';
 import ReactQuillTest from './Editor/ReactQuillTest';
 import PrivatePage from './private/PrivatePage';
 import Rubiz from './RubizCube/Rubiz';
+import PasteImageFromClip from './PasteImageFromClip';
+import Github from './Github/Github';
+import AppLogo from './FramerMotion/SVG/AppLogo';
 
 export default function App() {
-	const [routes,] = useState('Rubiz,ReactQuillTest,MyDoc,PseudoCodeEditor,ToastProgress,ApiTester,framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor,Crypto,Interval,PWA-SW,PrivatePage'.split(','));
+	const [routes,] = useState('ApplogoSVG,Github,PasteImageFromClip,Rubiz,ReactQuillTest,MyDoc,PseudoCodeEditor,ToastProgress,ApiTester,framer,swipe,storage,carosel,clip,duplicateFrameRemover,VideoProcessor,Crypto,Interval,PWA-SW,PrivatePage'.split(','));
 	const [elements,] = useState([
-		<Rubiz/>,<ReactQuillTest />, <MyDoc />,
+		<AppLogo />,
+		<Github />,
+		<PasteImageFromClip />,
+		<Rubiz />, <ReactQuillTest />, <MyDoc />,
 		<PseudoCodeEditor />, <ToastProgress />, <ApiTester />,
 		<Framer />, <Swipe />, <Storage />, <Carosel />,
 		<ClipboardMobile />, <DuplicateRemover />, <VideoProcessor />,
