@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 const token = '';
 
 export default function Github() {
-    const [imgUrl, setImgUrl] = useState('');
+    const [imgUrl, setImgUrl] = useState(localStorage.getItem('token'));
 
     return (
         <div>
-            <input type="text" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} /><br />
+            <input type="text" value={imgUrl} onChange={(e) => localStorage.setItem('token', e.target.value)} /><br />
             <img src={`https://raw.githubusercontent.com/storeage/media/main/img.png?token=${token}`} alt="Description of the image" />
             <img src={`https://raw.githubusercontent.com/storeage/media/main/img.png?token=${token.slice(4)}`} alt="without ghp" />
             <img src={`https://${token}@raw.githubusercontent.com/storeage/media/main/img.png`} alt="Image" />
