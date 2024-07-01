@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import { token } from './Token';
+const token = '';
 
 export default function Github() {
     const [imgUrl, setImgUrl] = useState('');
 
     return (
         <div>
-            <input type="text" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} />
-            <img src={imgUrl} alt="without ghp" />
-            <img src={imgUrl.slice(4)} alt="with ghp" />
+            <input type="text" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} /><br />
+            <img src={`https://raw.githubusercontent.com/storeage/media/main/img.png?token=${token}`} alt="Description of the image" />
+            <img src={`https://raw.githubusercontent.com/storeage/media/main/img.png?token=${token.slice(4)}`} alt="without ghp" />
+            <img src={`https://${token}@raw.githubusercontent.com/storeage/media/main/img.png`} alt="Image" />
+            <img src={`https://${token.slice(4)}@raw.githubusercontent.com/storeage/media/main/img.png`} alt="ithout gh" />
             <button onClick={createFile}>Create file</button>
             <button onClick={getFile}>read file</button>
             <button onClick={deleteFile}>delete file</button>
