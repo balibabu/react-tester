@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-const token = '';
+// const token = '';
 
 export default function Github() {
-    const [imgUrl, setImgUrl] = useState(localStorage.getItem('token'));
+    const [token, setToken] = useState(localStorage.getItem('token'));
 
     return (
         <div>
